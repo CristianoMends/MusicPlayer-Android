@@ -30,7 +30,7 @@ https://drive.google.com/file/d/187GA_dj0Q4iN78mSmUUB3tAFY9TGSAuF/view?usp=drive
 1. Clone este repositório para o seu computador usando o seguinte comando:
 
 ```bash
-git clone https://github.com/[seu-nome-de-usuario]/music-player-android.git
+git clone https://github.com/CristianoMends/MusicPlayer-Android
 ```
 2. Abra o projeto no Android Studio.
 
