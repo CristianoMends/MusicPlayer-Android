@@ -44,9 +44,8 @@ class MusicEngine(
         load = ProgressDialog(context)
         mediaPlayer = MediaPlayer()
         mediaPlayer.setOnErrorListener { mp, what, extra ->
-            // Lidar com o evento de erro do MediaPlayer aqui
             Log.e(TAG, "Error occurred: $what, $extra")
-            true // Retorna true para indicar que o erro foi tratado
+            true
         }
 
         audioFiles = searchAudioFiles(externalStorageDirectory)
@@ -115,6 +114,10 @@ class MusicEngine(
                 currentSong = 0
             }
             mediaPlayer.release()
+            for(i in playlist.indices){
+                playlist[i].setBackgroundColor(Color.WHITE)
+            }
+            playlist[currentSong].setBackgroundColor(Color.RED)
             playSong(context)
             update(context)
         }
@@ -124,6 +127,10 @@ class MusicEngine(
                 currentSong = audioFiles.size - 1
             }
             mediaPlayer.release()
+            for(i in playlist.indices){
+                playlist[i].setBackgroundColor(Color.WHITE)
+            }
+            playlist[currentSong].setBackgroundColor(Color.RED)
             playSong(context)
             update(context)
         }
@@ -155,6 +162,10 @@ class MusicEngine(
                 currentSong = 0
             }
             mediaPlayer.release()
+            for(i in playlist.indices){
+                playlist[i].setBackgroundColor(Color.WHITE)
+            }
+            playlist[currentSong].setBackgroundColor(Color.RED)
             playSong(context)
         }
         handler.postDelayed({ update(context) }, 250)    }

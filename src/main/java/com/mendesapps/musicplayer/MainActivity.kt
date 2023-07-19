@@ -31,11 +31,6 @@ class MainActivity : AppCompatActivity() {
         checkPermissions()
     }
 
-    override fun onPause() {
-        super.onPause()
-
-    }
-
     private fun checkPermissions() {
         val permissions = arrayOf(
             Manifest.permission.READ_EXTERNAL_STORAGE,
